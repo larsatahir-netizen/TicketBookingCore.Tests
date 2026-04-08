@@ -67,7 +67,7 @@ namespace TicketBookingCore.Tests
             Assert.Equal(_request.FirstName, savedTicketBooking.FirstName);
             Assert.Equal(_request.LastName, savedTicketBooking.LastName);
             Assert.Equal(_request.Email, savedTicketBooking.Email);
-        }  
+        }
 
         [Fact]
         public void ShouldReturnErrorForInvalidEmail()
@@ -78,6 +78,9 @@ namespace TicketBookingCore.Tests
                 LastName = "Tahir",
                 Email = "LarsaTahir"
             };
+
+            var response = _processor.Book(response);
+             
 
         }                              
     }
