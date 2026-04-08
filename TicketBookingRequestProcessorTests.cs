@@ -79,7 +79,6 @@ namespace TicketBookingCore.Tests
                 Email = "LarsaTahir"
             };
 
-         
         }                              
     }
 }
