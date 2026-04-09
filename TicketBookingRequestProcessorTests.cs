@@ -81,7 +81,7 @@ namespace TicketBookingCore.Tests
 
             var response = _processor.Book(request);
 
-            Assert.False(response.Bool);
+            Assert.False(response.IsValid);
 
             _ticketBookingRepositoryMock.Verify(x => x.Save(It.IsAny<TicketBooking>())Times.Never);
 
