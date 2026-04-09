@@ -79,8 +79,10 @@ namespace TicketBookingCore.Tests
                 Email = "LarsaTahir"
             };
 
-            var response = _processor.Book(response);
-             
+            var response = _processor.Book(request);
+
+            Assert.False(response.Bool);
+
 
         }                              
     }
