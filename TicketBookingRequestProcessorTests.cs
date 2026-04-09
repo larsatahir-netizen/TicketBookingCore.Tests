@@ -83,6 +83,7 @@ namespace TicketBookingCore.Tests
 
             Assert.False(response.Bool);
 
+            _ticketBookingRepositoryMock.Verify(x => x.Save(It.IsAny<TicketBooking>())Times.Never);
 
         }                              
     }
