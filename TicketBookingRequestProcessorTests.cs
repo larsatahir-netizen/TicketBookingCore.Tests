@@ -1,4 +1,6 @@
 ﻿using Moq;
+using Xunit;
+using TicketBookingCore;
 
 namespace TicketBookingCore.Tests
 {
@@ -81,9 +83,9 @@ namespace TicketBookingCore.Tests
 
             var response = _processor.Book(request);
 
-            Assert.False(response.IsValid);
+            Assert.False(response.Works);
 
-            _ticketBookingRepositoryMock.Verify(x => x.Save(It.IsAny<TicketBooking>())Times.Never);
+            _ticketBookingRepositoryMock.Verify(x => x.Save(It.IsAny<TicketBooking>()),Times.Never);
 
         }                              
     }
